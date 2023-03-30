@@ -179,5 +179,3 @@ func FixtureCart() *Cart {
 		Cases: []*Case{FixtureCase(4, FixtureBeer("Duvel", "Tripel Hop", 11.0), 14)},
 	}
 }
-
-func main() {}

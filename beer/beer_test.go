@@ -41,7 +41,7 @@ func TestSubTotal(t *testing.T) {
 	assert.Equal(t, 37.0, cart.Subtotal())
 }
 
-func TestCart_Subtotal(t *testing.T) {
+func TestCartSubtotal(t *testing.T) {
 	tests := []struct {
 		name string
 		cart *Cart
