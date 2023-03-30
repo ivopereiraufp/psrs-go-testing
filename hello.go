@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"greetings"
+	"github.com/ivopereiraufp/psrs-go-testing/greetings"
 	"log"
 )
 
