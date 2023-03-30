@@ -24,10 +24,16 @@ jobs:
     - name: Build
       run: go build -v ./...
 
-    - name: 'Qodana Scan'
-      uses: JetBrains/qodana-action@main
+#    - name: 'Qodana Scan'
+#      uses: JetBrains/qodana-action@main
+#      env:
+#        QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
       env:
-        QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     - name: Test
       run: go test -v ./...
