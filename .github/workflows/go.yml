@@ -24,10 +24,10 @@ jobs:
     - name: Build
       run: go build -v ./...
 
-    #- name: 'Qodana Scan'
-    #  uses: JetBrains/qodana-action@main
-    #  env:
-    #    QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+    - name: 'Qodana Scan'
+      uses: JetBrains/qodana-action@v2024.1
+      env:
+        QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
 
     - name: Test
       run: go test -v ./...
